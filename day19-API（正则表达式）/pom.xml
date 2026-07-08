@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>day19-regex-summary</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>day19-regex-summary</name>
+    <description>
+        归纳并拓展 day19 中的正则表达式知识点：
+          1. basics    - 字符类、预定义字符、数量词
+          2. validate  - 综合校验（QQ/用户名/手机/座机/邮箱/身份证/密码强度）
+          3. crawler   - Pattern/Matcher、贪婪/非贪婪、零宽断言、URL 爬取
+          4. group     - 捕获组、反向引用、非捕获组、命名分组
+          5. replace   - replaceAll / split / 反向引用替换
+    </description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

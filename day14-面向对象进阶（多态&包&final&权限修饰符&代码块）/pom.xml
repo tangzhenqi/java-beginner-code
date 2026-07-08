@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>day14-summary</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!--
+        day14 知识点归纳与拓展：
+            1. 多态（polymorphism）   —— 父类引用指向子类对象、方法分派、向上/向下转型、instanceof 模式匹配
+            2. 包（package）          —— 包的作用、import、同名类的全限定名访问
+            3. final                  —— 修饰类/方法/变量/引用/数组的语义
+            4. 权限修饰符（access）   —— private / 默认 / protected / public 的可见范围
+            5. 代码块（code block）   —— 局部代码块、构造代码块、静态代码块；继承体系下的执行顺序
+    -->
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
