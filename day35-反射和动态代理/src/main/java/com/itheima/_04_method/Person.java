@@ -18,11 +18,13 @@ public class Person {
         System.out.println("睡觉");
     }
 
+    @SuppressWarnings("unused")
     private String eat(String something) throws IOException, NullPointerException {
         System.out.println("在吃 " + something);
         return "好吃，奥利给";
     }
 
+    @SuppressWarnings("unused")
     private void eat(String something, int times) {
         System.out.println("一共吃了 " + times + " 份 " + something);
     }
