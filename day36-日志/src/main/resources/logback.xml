@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 控制台输出：把日志打印到控制台 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <!-- %d 日期 %-5level 级别 %logger 日志来源 %thread 线程名 %msg 内容 %n 换行 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %logger{36} [%thread] : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 文件输出：把日志写到 logs 目录，按大小+日期滚动拆分 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+        <!-- 日志文件输出路径（相对当前模块，运行时自动创建 logs 目录） -->
+        <file>logs/order.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/order-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>1MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!--
+        root 是根日志器，level 控制全局最低打印级别。
+        这里设为 info：TRACE、DEBUG 会被过滤掉，INFO 及以上才会输出。
+    -->
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

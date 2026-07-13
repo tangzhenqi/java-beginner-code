@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>day37-classloader-summary</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>day37-类加载器</name>
+    <description>
+        day37 类加载器：
+        1. 类加载过程：加载 -> 验证 -> 准备 -> 解析 -> 初始化
+        2. 三级类加载器（Bootstrap / Platform / System）与双亲委派
+        3. ClassLoader.getResourceAsStream 读取 classpath 资源
+        4. 实战案例：用类加载器读取 db.properties 初始化数据库连接参数
+    </description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
