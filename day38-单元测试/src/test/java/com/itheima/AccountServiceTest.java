@@ -14,6 +14,16 @@ import static org.junit.Assert.fail;
  * - 不直接在业务方法上加 @Test（业务方法可能有参/有返回值/是静态的）
  * - 单独写测试类、测试方法（被测方法名 + Test）
  * - @Before 准备数据、@Test 断言、@After 还原/清理，做到「不污染原数据」
+ * <p>
+ * assertEquals（来自 org.junit.Assert）：断言「期望值」和「实际值」相等。
+ * - 相等：静默通过，继续执行下一行
+ * - 不相等：抛 AssertionError，当前测试立即失败，报错形如 expected:<700.0> but was:<...>
+ * 常用重载：
+ * - assertEquals(expected, actual)              比较 int、String、对象（对象用 equals 比较）
+ * - assertEquals(expected, actual, delta)       比较 double/float，delta 是允许误差，浮点数必须用这个
+ * - assertEquals(message, expected, actual)     失败时显示自定义消息 message
+ * 注意：期望值在前、实际值在后，写反了失败信息会误导排查方向。
+ * 同家族：assertTrue / assertFalse / assertNull / assertNotNull / assertSame / fail
  */
 public class AccountServiceTest {
 
